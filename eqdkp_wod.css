@@ -61,7 +61,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* body */
 html { min-height: 100%; }
 body {
-	background: url('TEMPLATE_BACKGROUND') no-repeat scroll center top / 2500px auto,
+	background: url('TEMPLATE_BACKGROUND') no-repeat scroll ~"center top / 2500px auto",
 				url('TEMPLATE_IMAGE_PATH/bg-repeat.jpg') repeat-y scroll center top #100805;
 	color: #CEC5AF;
 	text-align: center;
@@ -98,7 +98,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	margin-bottom: 10px;
 	padding: 0 155px;
 	min-height: 78px;
-	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll center -30px / 100% 108px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -30px / 100% 108px" transparent;
 	color: #999;
 	font: 13px Georgia, 'Palatino Linotype', Times,serif;
 	text-align:left;
@@ -112,12 +112,12 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 #personalArea:before {
 	left: -26px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll center top / 177px 101px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll ~"center top / 177px 101px" transparent;
 	box-shadow: 20px -10px 20px -15px #000;
 }
 #personalArea:after {
 	right: -26px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll center top / 177px 101px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll ~"center top / 177px 101px" transparent;
 	box-shadow: -20px -10px 20px -15px #000
 }
 
@@ -402,6 +402,33 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	text-align: left;
 }
 
+/* Sidebar */
+.contentSidebar {
+	display: flex;
+	overflow: hidden !important;
+}
+
+.contentSidebarRight {
+	border-left: 1px solid @eqdkpSidebarBorderColor;
+	background-color: @eqdkpSidebarBackgroundColor;
+	color: @eqdkpSidebarFontColor;
+	padding: 10px;
+}
+
+.contentSidebarLeft {
+	border-right: 1px solid @eqdkpSidebarBorderColor;
+	background-color: @eqdkpSidebarBackgroundColor;
+	color: @eqdkpSidebarFontColor;
+	padding: 10px;
+}
+
+/* Contrast */
+.contentContrast {
+	color: @eqdkpContentContrastColor;
+	background-color: @eqdkpContentContrastBackgroundColor;
+	border-color: @eqdkpContentContrastBorderColor;
+}
+
 #contentFooter {
 	margin-top: 50px;
 	margin-right: -40px;
@@ -516,7 +543,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	font-size: 14px;
 	position: relative;
 	float: left;
-	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll center -32px / 100% 108px #333;
+	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -32px / 100% 108px" #333;
 	height: 44px;
 	box-shadow: 0px 3px 20px 18px #000;
 }
@@ -531,12 +558,12 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 .mainmenu:before {
 	left: -173px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll center top / 177px 101px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll ~"center top / 177px 101px" transparent;
 	box-shadow: 35px -5px 10px -30px #000;
 }
 .mainmenu:after {
 	right: -173px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll center top / 177px 101px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll ~"center top / 177px 101px" transparent;
 	box-shadow: -30px -5px 20px -30px #000;
 }
 .mainmenu-deco:before, .mainmenu-deco:after {
@@ -549,14 +576,14 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	top: -35px;
 	width: 266px;
 	height: 35px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-deco.png') no-repeat scroll center top / 266px 35px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-deco.png') no-repeat scroll ~"center top / 266px 35px" transparent;
 }
 .mainmenu-deco:after {
 	top: -70px;
 	width: 266px;
 	height: 35px;
 	opacity: 0;
-	background: url('TEMPLATE_IMAGE_PATH/nav-deco-fire-glow.png') no-repeat scroll center top / 266px 35px transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-deco-fire-glow.png') no-repeat scroll ~"center top / 266px 35px" transparent;
 	animation-name: opacity-pulse;
 	animation-duration: 2.5s;
 	animation-timing-function: ease-in;
@@ -1348,6 +1375,11 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	box-shadow: 0px 0px 10px 8px rgba(51, 255, 0, 0.4);
 }
 
+.infobox-opacgrey {
+	background: rgba(0, 0, 0, 0.2);
+	color: #000000;
+}
+
 .infobox-global {
 	position: fixed;
 		 top: -1px;
@@ -1507,10 +1539,10 @@ ul.breamcrumb a {
 
 ul.breamcrumb li:first-child a {
 	width: 16px;
-	background: url('TEMPLATE_IMAGE_PATH/hearthstone.png') no-repeat scroll 1em 0em / 16px auto transparent;
+	background: url('TEMPLATE_IMAGE_PATH/hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto" transparent;
 }
 ul.breamcrumb li:first-child a:hover {
-	background: url('TEMPLATE_IMAGE_PATH/hearthstone.png') no-repeat scroll 1em 0em / 16px auto,
+	background: url('TEMPLATE_IMAGE_PATH/hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto",
 				radial-gradient(rgb(0, 219, 255) 10%, rgba(0, 219, 255, 0.3) 65%, transparent 100%) repeat scroll 0% 0% transparent;
 }
 ul.breamcrumb li:first-child a i { display: none; }
@@ -1806,9 +1838,11 @@ ul.breamcrumb .current::before{
 	text-align: left;
 	background: none;
 }
-.sf-btn-ddm > li a, .sf-btn-ddm > li a:visited{
+.sf-btn-ddm > li a, .sf-btn-ddm > li a:visited, .sf-btn-ddm > li a:link, .sf-btn-ddm > li a:active{
 	color: #fff !important;
-	padding: 0.25em 0.5em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	padding-left: 0.5em;
 }
 .sf-btn-ddm a:hover {
 	background: transparent;
@@ -2166,6 +2200,68 @@ fieldset.settings.floatRight.raid input[type="text"]{
 	line-height: 35px;
 }
 
+#bottommenu_admin, #bottommenu_chars{
+	position: fixed;
+	bottom: 0px;
+	background: rgba(0,0,0,.85);
+	float: left;
+	width: 70%;
+	z-index: 99;
+	height: 42px;
+	padding: 0px 0 0px 10px;
+	display:none;
+	color:white;
+	vertical-align:middle;
+	margin:0;
+}
+#bottommenu_chars{
+	height: 70px;
+	clear: both;
+}
+.bottommenu_roundedcorner{
+	border-radius: 10px 10px 0px 0px;
+}
+.bottommenu_chars_table {
+	height: 70px;
+	width:100%;
+}
+.bottommenu_admin_table {
+	height: 42px;
+	width:100%;
+}
+.bottommenu_chars_icons {
+	width:65px;
+}
+.bottommenu_admin_icons {
+	width:48px;
+}
+.bottommenu_chars_note {
+	width:60%;
+}
+.hl_attendee_checked{
+	box-shadow: 0px 0px 3px #008AFF;
+	border-color: #008AFF;
+}
+.raidcal_buttonrow{
+	vertical-align:middle;
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+}
+.raidcal_buttonrow_left{
+	width: 60%;
+	vertical-align:middle;
+}
+.raidcal_buttonrow_middle{
+	width: 22%;
+	vertical-align:middle;
+}
+.raidcal_buttonrow_right{
+	width: 18%;
+	vertical-align:middle;
+}
+.buttonblock{
+	color:black;
+}
 #raidcal_signin_form h2 span.toggle_button:before, #toogleRaidcalModeration h2 span.toggle_button:before {
 	float: none !important;
 	font-size: 13px;
@@ -2257,7 +2353,6 @@ a.attendee_Link:hover{
 
 span.group_selector {
 	outline: none;
-	float: right;
 	display: block;
 }
 
@@ -3487,12 +3582,16 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 	}
 	
+	.responsive div.leaderboard > div.floatLeft {
+		float: none;
+		width: 100% !important;
+	}
 	
 	/* Mobile Navigation */
 	.nav-mobile {
 		width: 100%;
 		min-height: 3em;
-		background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll center -32px / 100% 108px #333;
+		background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -32px / 100% 108px" #333;
 	}
 	
 	.nav-mobile a {
@@ -3904,6 +4003,18 @@ button.thirdpartylogin.openid {
 	border-radius: 3px;
 	border-color: transparent;
 }
+
+/* Leaderboard */
+.leaderboard {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.leaderboard > div > div{
+	padding: 6px;
+}
+
+
 
 @keyframes opacity-pulse {
 	  0% { opacity: 0; }

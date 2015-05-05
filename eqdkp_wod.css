@@ -61,8 +61,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* body */
 html { min-height: 100%; }
 body {
-	/*background: url('TEMPLATE_BACKGROUND') no-repeat T_BACKGROUND_POSITION center -200px #142944;*/
-	background: url('TEMPLATE_BACKGROUND') no-repeat scroll center top,
+	background: url('TEMPLATE_BACKGROUND') no-repeat scroll center top / 2500px auto,
 				url('TEMPLATE_IMAGE_PATH/bg-repeat.jpg') repeat-y scroll center top #100805;
 	color: #CEC5AF;
 	text-align: center;
@@ -83,6 +82,16 @@ h1, h2, h3 {
 h1 { font-size: 20px; }
 h2 { font-size: 18px; }
 h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
+
+#bg-video-wrapper video {
+	position: absolute;
+		 top: 0px;
+		left: 50%;
+	width: 1920px;
+	margin-left: -960px;
+	opacity: 0;
+	z-index: -100;
+}
 
 /* personal area */
 #personalArea {

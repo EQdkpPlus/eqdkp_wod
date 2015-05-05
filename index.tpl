@@ -298,6 +298,27 @@
 				}
 				<!-- ENDIF -->
 			});
+			
+			<!-- IF T_BACKGROUND_TYPE == 0 and T_BACKGROUND_POSITION == 'scroll' and not S_IN_ADMIN -->
+			// Background Video -- To disable, set the Background position to fixed in ACP: Style Management
+			$(document).ready(function() {
+				if($(window).width() >= 1200) {
+					var html_bg_video  = '<video preload="auto" autoplay="true" loop="loop">';
+						html_bg_video += '	<source src="{TEMPLATE_PATH}/videos/key-render.mp4" type="video/mp4">';
+						html_bg_video += '	<source src="{TEMPLATE_PATH}/videos/key-render.webm" type="video/webm">';
+						html_bg_video += '</video>';
+					
+					$('#bg-video-wrapper').html(html_bg_video);
+					$('#bg-video-wrapper video').on('canplaythrough', function() {
+						if ($(this).css("opacity") != 1) {
+							$(this).delay(100).fadeTo(4000, 1);
+						}
+					});
+				} else {
+					$('#bg-video-wrapper').hide();
+				}
+			});
+			<!-- ENDIF -->
 			<!-- ELSE -->
 				<!-- JS for simple header. Above is for normal header only -->
 			<!-- ENDIF -->
@@ -305,6 +326,7 @@
 		</script>
 	</head>
 	<body id="top" class="<!-- IF S_REPONSIVE -->responsive <!-- ENDIF --><!-- IF not S_NORMAL_HEADER -->simple-header<!-- ENDIF --> {BROWSER_CLASS}<!-- IF T_PORTAL_WIDTH --> fixed_width<!-- ENDIF --><!-- IF S_IN_ADMIN --> admin<!-- ELSE --> frontend<!-- ENDIF -->">
+		<div id="bg-video-wrapper"></div>
 		{STATIC_HTMLCODE}
 		<!-- IF S_NORMAL_HEADER -->
 		<header>

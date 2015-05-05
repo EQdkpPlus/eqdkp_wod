@@ -3283,6 +3283,12 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		line-height: 22px;
 		font-size: 16px;
 	}
+	
+	.responsive #personalArea:before, .responsive #personalArea:after {
+		background: none;
+		box-shadow: none;
+	}
+	
 	.responsive #personalArea i{
 		line-height: 30px;
 		font-size: 24px;
@@ -3306,6 +3312,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	
 	.responsive .hiddenDesktop {
 		display:block;
+	}
+	
+	.responsive #mainmenu {
+		margin: 0;
 	}
 	
 	.responsive .mainmenu i {
@@ -3350,6 +3360,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	
 	.responsive .portal .second, .portal .first {
 		padding: 0px;
+	}
+	
+	.responsive .portal .second .columnInner {
+		margin-top: 50px;
 	}
 	
 	.responsive:not(.simple-header) fieldset.settings dd {
@@ -3399,6 +3413,10 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		float: none;
 	}
 	
+	.responsive .breadcrumb-container {
+		margin: 0;
+	}
+	
 	.responsive .breamcrumb li, .responsive .breamcrumb li a:after, .responsive .breamcrumb li a:before {
 		display: none;
 	}
@@ -3408,8 +3426,8 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 	
 	.responsive .breamcrumb li:first-child a {
-		border-right: 1px solid #ccc;
-		padding-right: 8px;
+		border-right: 1px solid rgba(255, 0, 0, 0.2);
+		padding-right: 15px;
 		line-height: 27px;
 		padding-left: 8px !important;
 	}
@@ -3472,26 +3490,21 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	
 	/* Mobile Navigation */
 	.nav-mobile {
-		background: #45484d; /* Old browsers */
-		background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top, #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top, #45484d 0%,#000000 100%); /* Opera 11.10+ */
-		background: -ms-linear-gradient(top, #45484d 0%,#000000 100%); /* IE10+ */
-		background: linear-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 		width: 100%;
 		min-height: 3em;
+		background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll center -32px / 100% 108px #333;
+	}
+	
+	.nav-mobile a {
+		color: #E53101;
 	}
 	
 	.nav-mobile > i {
 		float: right;
-		background-color: #fff;
-		border-radius: 4px;
-		color: #000;
-		padding: 4px 5px 2px 5px;
 		margin: 4px;
-		font-size: 22px;
+		padding: 2px 10px 2px;
+		color: #FF7E00;
+		font-size: 26px;
 	}
 	
 	.nav-mobile-overlay {
@@ -3504,13 +3517,13 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 		display: none;
 		margin-bottom: 10px;
 		padding: 10px;
-		background-color: rgba(255,255,255,.95);
-		border-right: 1px solid #bbb;
+		background-color: rgba(16, 8, 5, 0.8);
+		border-right: 1px solid #666;
 		z-index: 999;
 	}
 	
 	.nav-mobile-closebtn {
-		background-color: #4E7FA8;
+		background-color: #E53101;
 		color: #fff;
 		border-radius: 4px;
 		position: fixed;
@@ -3524,7 +3537,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.mainmenu-mobile > li,  .nav-mobile-overlay .admin-headline, .adminmenu-mobile > li {
 		margin-bottom: 24px;
 		font-size: 18px;
-		color: #4E7FA8;
+		color: #E53101;
 		font-weight: bold;
 	}
 	

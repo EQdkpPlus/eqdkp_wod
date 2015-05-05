@@ -41,6 +41,7 @@
 			*/
 			
 			<!-- IF not S_IN_ADMIN -->
+			@media all and (min-width: 900px) {
 				<!-- IF S_PORTAL_LEFT -->
 					<!-- IF T_COLUMN_LEFT_WIDTH > 0 -->
 					.breadcrumb-container { left: -{T_COLUMN_LEFT_WIDTH}; }
@@ -69,6 +70,7 @@
 					);
 				}
 				<!-- ENDIF -->
+			}
 			<!-- ENDIF -->
 		</style>
 		

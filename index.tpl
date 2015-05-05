@@ -516,7 +516,7 @@
 							<header>
 								<div class="infobox-global infobox-{global_warnings.CLASS}">
 									<div class="infobox infobox-large infobox-{global_warnings.CLASS} clearfix">
-										<i class="{global_warnings.ICON} fa-4x pull-left"></i> {global_warnings.MESSAGE}
+										<i class="{global_warnings.ICON} fa-3x pull-left"></i> {global_warnings.MESSAGE}
 									</div>
 								</div>
 							</header>

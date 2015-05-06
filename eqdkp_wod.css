@@ -2202,15 +2202,17 @@ fieldset.settings.floatRight.raid input[type="text"]{
 
 #bottommenu_admin, #bottommenu_chars{
 	position: fixed;
-	bottom: 0px;
-	background: rgba(0,0,0,.85);
+	    left: 0;
+	  bottom: 0px;
+	border: 1px solid #FF7200;
+	background: rgba(140, 65, 3, 0.95);
 	float: left;
 	width: 70%;
 	z-index: 99;
 	height: 42px;
 	padding: 0px 0 0px 10px;
 	display:none;
-	color:white;
+	color: #CEC5AF;
 	vertical-align:middle;
 	margin:0;
 }
@@ -2219,7 +2221,7 @@ fieldset.settings.floatRight.raid input[type="text"]{
 	clear: both;
 }
 .bottommenu_roundedcorner{
-	border-radius: 10px 10px 0px 0px;
+	border-top-right-radius: 35% 25px;
 }
 .bottommenu_chars_table {
 	height: 70px;
@@ -2260,7 +2262,7 @@ fieldset.settings.floatRight.raid input[type="text"]{
 	vertical-align:middle;
 }
 .buttonblock{
-	color:black;
+	color: #CEC5AF;
 }
 #raidcal_signin_form h2 span.toggle_button:before, #toogleRaidcalModeration h2 span.toggle_button:before {
 	float: none !important;

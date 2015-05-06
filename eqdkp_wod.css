@@ -3948,15 +3948,15 @@ li.prio_2 { border-left: 4px solid #FF0500; }
 	padding-top: 6px;
 	padding-left: 4px;
 	padding-right: 4px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #666;
 }
 
 .notification_list li.unread {
-	background-color: #EAEAEA;
+	background-color: #333;
 }
 
 .notification_list li:first-child{
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #666;
 }
 
 .toggleResponsive {

@@ -100,7 +100,6 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	min-height: 78px;
 	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -30px / 100% 108px" transparent;
 	color: #999;
-	font: 13px Georgia, 'Palatino Linotype', Times,serif;
 	text-align:left;
 }
 #personalArea:before, #personalArea:after {
@@ -154,7 +153,11 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	margin-left: 15px;
 }
 
-#personalAreaTime .personalAreaTime { color: #666; }
+#personalAreaTime .personalAreaTime {
+	margin-top: 6px;
+	color: #777;
+	letter-spacing: -1px;
+}
 
 #personalAreaTime #search_form {
 	position: relative;
@@ -163,9 +166,9 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
 #personalAreaTime #search_form input {
 	background-color: rgba(45, 45, 45, 0.8);
-	border: 1px solid #666;
+	border: 1px solid #777;
 	border-radius: 4px 4px 4px 4px;
-	color: #666;
+	color: #777;
 	height: 20px;
 	padding: 2px 5px;
 	width: 200px;
@@ -188,8 +191,6 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	color: #666;
 	box-shadow: none;
 }
-
-#personalAreaTime .personalAreaTime { margin-top: 6px; }
 
 #loginarea_search {
 	width: 45px !important;

@@ -532,8 +532,10 @@
 					<article class="second column <!-- IF not S_PORTAL_RIGHT -->no_third_column<!-- ENDIF -->">
 						<div class="columnInner">
 							<!-- IF S_SHOW_COOKIE_HINT -->
-							<div class="infobox infobox-large infobox-blue clearfix">
-								<i class="fa-info-circle fa pull-left fa-2x"></i> {COOKIE_HINT}
+							<div class="infobox-global infobox-blue">
+								<div class="infobox infobox-large infobox-blue clearfix">
+									<i class="fa-info-circle fa pull-left fa-2x"></i> {COOKIE_HINT}
+								</div>
 							</div>
 							<!-- ENDIF -->	
 							<!-- BEGIN global_warnings -->

@@ -51,7 +51,7 @@
 				<!-- ENDIF -->
 				
 				<!-- IF S_PORTAL_LEFT or S_PORTAL_RIGHT -->
-				ul.breamcrumb {
+				.breadcrumb-container {
 					width: calc(100%
 						<!-- IF S_PORTAL_LEFT -->
 							<!-- IF T_COLUMN_LEFT_WIDTH > 0 -->
@@ -67,10 +67,13 @@
 							 + 210px
 							<!-- ENDIF -->
 						<!-- ENDIF -->
+						 - 136px
 					);
 				}
 				<!-- ENDIF -->
 			}
+			<!-- ELSE -->
+			.breadcrumb-container { position: relative; }
 			<!-- ENDIF -->
 		</style>
 		

@@ -250,12 +250,12 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	border-collapse: collapse;
 	display: table;
 	width: 100%;
+	box-shadow: 0px 0px 50px 25px #000,
+				0px 0px 0px 3500px rgba(0, 0, 0, 0.8) inset;
 }
 .columnContainer {
 	display: table-row;
 	border: none;
-	box-shadow: 0px 0px 50px 25px #000,
-				0px 0px 0px 3500px rgba(0, 0, 0, 0.8) inset;
 }
 
 .column {

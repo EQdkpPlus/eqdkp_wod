@@ -82,6 +82,7 @@
 			//<![CDATA[
 			{JS_CODE}
 			
+			<!-- IF not S_LOGGED_IN -->
 			$(document).ready(function() {
 				/* Login Dialog */
 				$( "#dialog-login" ).dialog({
@@ -91,6 +92,7 @@
 					autoOpen: false,
 				});
 			});
+			<!-- ENDIF -->
 			
 			<!-- IF S_NORMAL_HEADER -->
 			var user_timestamp_atom = "{USER_TIMESTAMP_ATOM}";
@@ -666,6 +668,7 @@
 		<!-- LISTENER debug -->
 	<!-- ENDIF -->
 
+	<!-- IF not S_LOGGED_IN -->
 	<div id="dialog-login" title="{L_login}">
 		<form method="post" action="{EQDKP_CONTROLLER_PATH}Login{SEO_EXTENSION}{SID}" name="login" id="login" class="fv_checkit">
 			<!-- LISTENER login_popup -->
@@ -711,6 +714,8 @@
 			<!-- ENDIF -->
 		</form>
 	</div>
+    <!-- ENDIF -->
+    
 	<div class="reponsiveTestClass" style="display:none;"><!-- This div is for testing the responsiveness --></div>
 	<script type="text/javascript">
 		{JS_CODE_EOP}

@@ -83,14 +83,23 @@ h1 { font-size: 20px; }
 h2 { font-size: 18px; }
 h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
-#bg-video-wrapper video {
+#bg-video-wrapper {
 	position: absolute;
+		 top: 0;
+	   right: 0;
+	  bottom: 0;
+		left: 0;
+	overflow: hidden;
+}
+#bg-video-wrapper video {
+	display: block;
+	position: relative;
 		 top: 0px;
 		left: 50%;
-	width: 1920px;
+	max-width: none;
 	margin-left: -960px;
-	opacity: 0;
 	z-index: -100;
+	opacity: 0;
 }
 
 /* personal area */
@@ -111,12 +120,13 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 #personalArea:before {
 	left: -26px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll ~"center top / 177px 101px" transparent;
+	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll ~"right top / 177px 101px" transparent;
 	box-shadow: 20px -10px 20px -15px #000;
 }
 #personalArea:after {
-	right: -26px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll ~"center top / 177px 101px" transparent;
+	right: 0;
+	width: 147px;
+	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll ~"left top / 177px 101px" transparent;
 	box-shadow: -20px -10px 20px -15px #000
 }
 
@@ -1412,22 +1422,22 @@ div.pagination li {
 	display: inline;
 }
 
-div.pagination ul li > a, div.pagination ul li > span{
+div.pagination ul li > a,
+div.pagination ul li > span{
 	float: left;
-	border-color: #DDDDDD;
+	border-color: #5D5D5D;
 	border-image: none;
 	border-style: solid;
 	border-width: 1px 1px 1px 1px;
 	text-decoration: none;
 	margin-left: -1px;
-	background-color: #fff;
+	background-image: linear-gradient(to bottom, #4D4D4D 0%, #000 60%);
 	padding: 4px 12px;
 	line-height: 20px;
 }
 
 div.pagination ul li.active > a {
-	background-color: #F7F7F9;
-	color: #999999;
+	color: #A4A4A4;
 	cursor: default;
 }
 
@@ -1447,8 +1457,8 @@ div.pagination ul li:last-child > a{
 }
 
 .pagination li > a:hover {
-	background-color: #f7f7f9;
-	color: #000;
+	background-image: linear-gradient(to top, #4D4D4D 0%, #000 60%);
+	color: #FFF;
 }
 
 .pagination .arrow-right a i{

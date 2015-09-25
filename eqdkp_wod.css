@@ -4208,105 +4208,129 @@ button.thirdpartylogin.openid {
  * PLUGIN and MODULE adjustments         *
  *****************************************/
 /* Shoutbox */
-.sb_horizontal .sb_content_container { background-color: #100805 !important; border-color: #666 !important; }
-.sb_horizontal .sb_with_avatar.sb_content_container:before { border-color: transparent #666 !important; }
-.sb_horizontal .sb_with_avatar.sb_content_container:after { border-color: transparent #100805 !important; }
+	.sb_horizontal .sb_content_container { background-color: #100805 !important; border-color: #666 !important; }
+	.sb_horizontal .sb_with_avatar.sb_content_container:before { border-color: transparent #666 !important; }
+	.sb_horizontal .sb_with_avatar.sb_content_container:after { border-color: transparent #100805 !important; }
 
 /* Chat Plugin */
-#chatMenu:before {
-	content: '';
-	position: relative;
-	right: -25px;
-	display: block;
-	height: 35px;
-	width: 150px;
-	border: 1px solid #FF7200;
-	background: none repeat scroll 0 0 rgba(255, 117, 0, 0.25);
-	transform: skew(-55deg);
-}
-#chatMenu:hover:before {
-	border-color: #FFA200;
-	background: none repeat scroll 0 0 rgba(255, 117, 0, 0.75);
-	box-shadow: -1px 0px 5px 1px #E53101;
-}
-
-.chatWindowMin {
-	position: relative;
-		 top: -35px;
-	padding: 6px 20px;
-	color: #CEC5AF;
-	font-size: 14px;
-	font-weight: bold;
-	text-shadow: 0px 0px 10px #000, 1px 2px 5px #000;
-	border: none;
-	background-color: transparent;
-}
-.chatWindowContainer {
-	position: relative;
-    	 top: -35px;
-}
-.chatWindow {
-	position: relative;
-		 top: -215px;
-}
-.chatWindow, .chatWindowMenu {
-	background-color: rgba(16, 8, 5, 0.9);
-	border-color: #666;
-}
-.chatWindowHeader, .chatWindowHeader2, .chatWindowHeaderInactive {
-	color: #CEC5AF;
-	text-shadow: 1px 1px 10px #000;
-	background: url('TEMPLATE_IMAGE_PATH/headerbg.png') no-repeat scroll left top #4E1212;
-	box-shadow: 1px 1px 15px #000 inset;
-}
-
-#chatMenu .chatWindowContent { color: #CEC5AF; }
-
-.chatOnlineList li:first-child { padding: 6px 0 0 2px; }
-.chatOnlineSeperator {
-	margin: -4px 0px 2px;
-	border-bottom: none;
-	border-radius: 40%;
-	background: linear-gradient(to right,
-		rgba(255, 255, 255, 0.1) 0%,
-		rgba(170, 170, 170, 0.7) 40%,
-		rgba(153, 153, 153, 1) 50%,
-		rgba(170, 170, 170, 0.7) 60%,
-		rgba(255, 255, 255, 0.1) 100%
-	) repeat scroll 0% 0% transparent;
-}
-.chatOnlineList .hand:hover {  color: #FFF; }
-
-.chatInput { border-color: #666; }
-
-.mine .chatUsername { color: #999; font-size: 11px; padding: 1px 0px 4px 8px; }
-.mine .chatTime { color: #666; padding: 2px 2px 4px 0; }
-
-.chatMessage, .mine .chatMessage {
-	color: #CEC5AF;
-	background: none repeat scroll 0% 0% #100805;
-	border: 1px solid #666;
-}
-.chatMessage::before, .mine .chatMessage::before { border-color: transparent #666; }
-.chatMessage::after, .mine .chatMessage::after { border-color: transparent #100805; }
-
-.chatPost { border-top: none; }
-.chatNewPost { padding-bottom: 2px; background-color: rgba(255, 155, 0, 0.25); }
-.noNewPost { background-color: transparent; }
-
-.blinkingHeader {
-	-webkit-animation: blinkingHeader 3s infinite;
-	animation: blinkingHeader 3s infinite;
-}
-
-@-webkit-keyframes blinkingHeader {
-	0% {box-shadow: 1px 1px 15px #FF0000 inset;}
-	50% {box-shadow: 1px 1px 15px #000 inset;}
-	100% {box-shadow: 1px 1px 15px #FF0000 inset;}
-}
-@keyframes blinkingHeader {
-	0% {box-shadow: 1px 1px 15px #FF0000 inset;}
-	50% {box-shadow: 1px 1px 15px #000 inset;}
-	100% {box-shadow: 1px 1px 15px #FF0000 inset;}
-}
+	#chatMenu .chatWindowContent { color: #CEC5AF; }
+	
+	.chatContainer .chatWindowContainer {
+		position: relative;
+			 top: -35px;
+	}
+	.chatContainer .chatWindow {
+		position: relative;
+			 top: -215px;
+	}
+	
+	.chatWindowHeader,
+	.chatWindowHeader2,
+	.chatWindowHeaderInactive {
+		color: #CEC5AF;
+		text-shadow: 1px 1px 10px #000;
+		background: url('TEMPLATE_IMAGE_PATH/headerbg.png') no-repeat scroll left top #4E1212;
+		box-shadow: 1px 1px 15px #000 inset;
+	}
+	.active .chatWindowHeader,
+	.active .chatWindowHeader2 {
+		box-shadow: 1px 1px 15px #FF7200 inset;
+	}
+	
+	.chatWindow,
+	.chatWindowMenu {
+		background-color: rgba(16, 8, 5, 0.9);
+		border-color: #666;
+	}
+	
+	.chatOnlineList .hand:hover {  color: #FFF; }
+	.chatOnlineList li:first-child { padding: 6px 0 0 2px; }
+	
+	.chatOnlineSeperator {
+		margin: -4px 0px 2px;
+		border-bottom: none;
+		border-radius: 40%;
+		background: linear-gradient(to right,
+			rgba(255, 255, 255, 0.1) 0%,
+			rgba(170, 170, 170, 0.7) 40%,
+			rgba(153, 153, 153, 1) 50%,
+			rgba(170, 170, 170, 0.7) 60%,
+			rgba(255, 255, 255, 0.1) 100%
+		) repeat scroll 0% 0% transparent;
+	}
+	
+	.chatInput { border-color: #666; }
+	
+	.mine .chatUsername { padding: 1px 0 4px 8px; color: #999; font-size: 11px; }
+	.mine .chatTime { padding: 2px 2px 4px 0; color: #666; }
+	
+	.chatMessage,
+	.mine .chatMessage {
+		color: #CEC5AF;
+		background: none repeat scroll 0% 0% #100805;
+		border: 1px solid #666;
+	}
+	.chatMessage::before,
+	.mine .chatMessage::before { border-color: transparent #666; }
+	.chatMessage::after,
+	.mine .chatMessage::after { border-color: transparent #100805; }
+	
+	.chatPost { border-top: none; }
+	.chatNewPost { padding-bottom: 2px; background-color: rgba(255, 155, 0, 0.25); }
+	.noNewPost { background-color: transparent; }
+	
+	.blinkingHeader {
+		-webkit-animation: blinkingHeader 3s infinite;
+		animation: blinkingHeader 3s infinite;
+	}
+	
+	@-webkit-keyframes blinkingHeader {
+		0% {box-shadow: 1px 1px 15px #FF7200 inset;}
+		50% {box-shadow: 1px 1px 15px #000 inset;}
+		100% {box-shadow: 1px 1px 15px #FF7200 inset;}
+	}
+	@keyframes blinkingHeader {
+		0% {box-shadow: 1px 1px 15px #FF7200 inset;}
+		50% {box-shadow: 1px 1px 15px #000 inset;}
+		100% {box-shadow: 1px 1px 15px #FF7200 inset;}
+	}
+	
+	
+	/* Chat Plugin - Button */
+	#chatMenu:before {
+		content: '';
+		position: relative;
+		   right: -25px;
+		display: block;
+		height: 35px;
+		width: 150px;
+		border: 1px solid #FF7200;
+		background: none repeat scroll 0 0 rgba(255, 117, 0, 0.25);
+		transform: skew(-55deg);
+	}
+	#chatMenu:hover:before {
+		border-color: #FFA200;
+		background: none repeat scroll 0 0 rgba(255, 117, 0, 0.75);
+		box-shadow: -1px 0px 5px 1px #E53101;
+	}
+	.chatWindowMin {
+		position: relative;
+			 top: -35px;
+		padding: 6px 20px;
+		color: #CEC5AF;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: 0px 0px 10px #000, 1px 2px 5px #000;
+		border: none;
+		background-color: transparent;
+	}
+	
+	
+	/* Chat Plugin - Page */
+	.chatBigContainer {
+		margin: 15px 0 0 0;
+		padding: 0 0 8px !important;
+		border-color: #666 !important;
+	}
+	.chatSidebar { margin: 15px 0 0 -10px; }
 

@@ -61,8 +61,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* body */
 html { min-height: 100%; }
 body {
-	background: url('TEMPLATE_BACKGROUND') no-repeat scroll ~"center top / 2500px auto",
-				url('TEMPLATE_IMAGE_PATH/bg-repeat.jpg') repeat-y scroll center top @eqdkpBodyBackgroundColor;
+	background: url('@{eqdkpBackgroundImage}') no-repeat scroll ~"center top / 2500px auto",
+				url('@{eqdkpTemplateImagePath}bg-repeat.jpg') repeat-y scroll center top @eqdkpBodyBackgroundColor;
 	color: @eqdkpBodyFontColor;
 	text-align: center;
 	font-size: @eqdkpBodyFontSize;
@@ -107,7 +107,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	margin-bottom: 10px;
 	padding: 0 155px;
 	min-height: 78px;
-	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -30px / 100% 108px" transparent;
+	background: url('@{eqdkpTemplateImagePath}bg-nav-bar-mid.png') no-repeat scroll ~"center -30px / 100% 108px" transparent;
 	color: #999;
 	text-align:left;
 }
@@ -120,13 +120,13 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 #personalArea:before {
 	left: -26px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll ~"right top / 177px 101px" transparent;
+	background: url('@{eqdkpTemplateImagePath}nav-endcap-left.png') no-repeat scroll ~"right top / 177px 101px" transparent;
 	box-shadow: 20px -10px 20px -15px #000;
 }
 #personalArea:after {
 	right: 0;
 	width: 147px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll ~"left top / 177px 101px" transparent;
+	background: url('@{eqdkpTemplateImagePath}nav-endcap-right.png') no-repeat scroll ~"left top / 177px 101px" transparent;
 	box-shadow: -20px -10px 20px -15px #000
 }
 
@@ -290,7 +290,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 
 .fixed_width #wrapper {
-	min-width: T_PORTAL_WIDTH !important;
+	min-width: @eqdkpPortalWidth !important;
 }
 
 #wrapper {
@@ -302,15 +302,15 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 
 .fixed_width #wrapper .portal .second {
-	width: T_PORTAL_WIDTH_WITHOUT_BOTH_COLUMNS !important;
+	width: @eqdkpPortalWidthWithoutBothColumns !important;
 }
 
 .fixed_width #wrapper .portal .second.no_third_column {
-	width: T_PORTAL_WIDTH_WITHOUT_LEFT_COLUMN !important;
+	width: @eqdkpPortalWidthWithoutLeftColumn !important;
 }
 
 .fixed_width #personalAreaInner {
-	width: T_PORTAL_WIDTH !important;
+	width: @eqdkpPortalWidth !important;
 	margin: auto;
 }
 
@@ -558,7 +558,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	font-size: 14px;
 	position: relative;
 	float: left;
-	background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -32px / 100% 108px" #333;
+	background: url('@{eqdkpTemplateImagePath}bg-nav-bar-mid.png') no-repeat scroll ~"center -32px / 100% 108px" #333;
 	height: 44px;
 	box-shadow: 0px 3px 20px 18px #000;
 }
@@ -573,12 +573,12 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 .mainmenu:before {
 	left: -173px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-left.png') no-repeat scroll ~"center top / 177px 101px" transparent;
+	background: url('@{eqdkpTemplateImagePath}nav-endcap-left.png') no-repeat scroll ~"center top / 177px 101px" transparent;
 	box-shadow: 35px -5px 10px -30px #000;
 }
 .mainmenu:after {
 	right: -173px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-endcap-right.png') no-repeat scroll ~"center top / 177px 101px" transparent;
+	background: url('@{eqdkpTemplateImagePath}nav-endcap-right.png') no-repeat scroll ~"center top / 177px 101px" transparent;
 	box-shadow: -30px -5px 20px -30px #000;
 }
 .mainmenu-deco:before, .mainmenu-deco:after {
@@ -591,14 +591,14 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	top: -35px;
 	width: 266px;
 	height: 35px;
-	background: url('TEMPLATE_IMAGE_PATH/nav-deco.png') no-repeat scroll ~"center top / 266px 35px" transparent;
+	background: url('@{eqdkpTemplateImagePath}nav-deco.png') no-repeat scroll ~"center top / 266px 35px" transparent;
 }
 .mainmenu-deco:after {
 	top: -70px;
 	width: 266px;
 	height: 35px;
 	opacity: 0;
-	background: url('TEMPLATE_IMAGE_PATH/nav-deco-fire-glow.png') no-repeat scroll ~"center top / 266px 35px" transparent;
+	background: url('@{eqdkpTemplateImagePath}nav-deco-fire-glow.png') no-repeat scroll ~"center top / 266px 35px" transparent;
 	animation-name: opacity-pulse;
 	animation-duration: 2.5s;
 	animation-timing-function: ease-in;
@@ -1555,10 +1555,10 @@ ul.breamcrumb a {
 
 ul.breamcrumb li:first-child a {
 	width: 16px;
-	background: url('TEMPLATE_IMAGE_PATH/hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto" transparent;
+	background: url('@{eqdkpTemplateImagePath}hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto" transparent;
 }
 ul.breamcrumb li:first-child a:hover {
-	background: url('TEMPLATE_IMAGE_PATH/hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto",
+	background: url('@{eqdkpTemplateImagePath}hearthstone.png') no-repeat scroll ~"1em 0em / 16px auto",
 				radial-gradient(rgb(0, 219, 255) 10%, rgba(0, 219, 255, 0.3) 65%, transparent 100%) repeat scroll 0% 0% transparent;
 }
 ul.breamcrumb li:first-child a i { display: none; }
@@ -1709,8 +1709,8 @@ ul.breamcrumb .current::before{
 	color: #13a;
 }
 
-.sf-menu ul { border: 1px solid rgba(102, 102, 102, 0.25); background: url('TEMPLATE_IMAGE_PATH/steel.png') repeat scroll center center #131313; }
-.sf-menu ul ul { border: 1px solid rgba(102, 102, 102, 0.25); background: url('TEMPLATE_IMAGE_PATH/steel.png') repeat scroll center center #131313; }
+.sf-menu ul { border: 1px solid rgba(102, 102, 102, 0.25); background: url('@{eqdkpTemplateImagePath}steel.png') repeat scroll center center #131313; }
+.sf-menu ul ul { border: 1px solid rgba(102, 102, 102, 0.25); background: url('@{eqdkpTemplateImagePath}steel.png') repeat scroll center center #131313; }
 
 .sf-menu li { background: transparent; }
 .sf-menu li li { background: transparent; }
@@ -1839,7 +1839,7 @@ ul.breamcrumb .current::before{
 .sf-menu.sf-ddm ul {
 	color: #CEC5AF;
 	border: 1px solid #666;
-	background: url('TEMPLATE_IMAGE_PATH/steel.png') repeat scroll center center #131313;
+	background: url('@{eqdkpTemplateImagePath}steel.png') repeat scroll center center #131313;
 	box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	padding: 3px;
 }
@@ -2081,7 +2081,7 @@ ul.breamcrumb .current::before{
 }
 
 .sortable li.mjs-nestedSortable-branch div, .sortable li.mjs-nestedSortable-leaf div {
-    background: url('TEMPLATE_IMAGE_PATH/table_bg_tile.png') repeat scroll 0% 0% #190A09;
+    background: url('@{eqdkpTemplateImagePath}table_bg_tile.png') repeat scroll 0% 0% #190A09;
     border-color: #666;
 }
 .sortable li.mjs-nestedSortable-branch div .fa-trash-o:before, .sortable li.mjs-nestedSortable-leaf div .fa-trash-o:before {
@@ -2893,7 +2893,7 @@ a.tool-item i {
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 2px;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-	background: url('TEMPLATE_IMAGE_PATH/steel.png') repeat scroll center center #131313;
+	background: url('@{eqdkpTemplateImagePath}steel.png') repeat scroll center center #131313;
 	background-clip: padding-box;
 	list-style: none outside none;
 	z-index: 1000;
@@ -3635,7 +3635,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	.nav-mobile {
 		width: 100%;
 		min-height: 3em;
-		background: url('TEMPLATE_IMAGE_PATH/bg-nav-bar-mid.png') no-repeat scroll ~"center -32px / 100% 108px" #333;
+		background: url('@{eqdkpTemplateImagePath}bg-nav-bar-mid.png') no-repeat scroll ~"center -32px / 100% 108px" #333;
 	}
 	
 	.nav-mobile a {
@@ -4111,7 +4111,7 @@ button.thirdpartylogin.openid {
 	.chatWindowHeaderInactive {
 		color: #CEC5AF;
 		text-shadow: 1px 1px 10px #000;
-		background: url('TEMPLATE_IMAGE_PATH/headerbg.png') no-repeat scroll left top #4E1212;
+		background: url('@{eqdkpTemplateImagePath}headerbg.png') no-repeat scroll left top #4E1212;
 		box-shadow: 1px 1px 15px #000 inset;
 	}
 	.active .chatWindowHeader,

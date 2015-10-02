@@ -437,12 +437,11 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 /* Contrast */
 .contentContrast {
 	color: @eqdkpContentContrastColor;
-	background-color: @eqdkpContentContrastBackgroundColor;
 	border-color: @eqdkpContentContrastBorderColor;
 }
 
 .contentContrast h1, .contentContrast h2, .contentContrast h3 {
-	color: @eqdkpContentContrastColor;
+	color: @eqdkpContentFontColorHeadings;
 }
 
 #contentFooter {

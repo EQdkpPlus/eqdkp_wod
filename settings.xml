@@ -18,18 +18,18 @@
 	<body_link_color_hover>rgb(255, 255, 255)</body_link_color_hover>
 	<body_link_decoration>none</body_link_decoration>
 	
-	<container_background_color></container_background_color>
-	<container_border_color></container_border_color>
-	<content_background_color></content_background_color>
+	<!-- IS MISSING --><container_background_color>rgba(0, 0, 0, 0)</container_background_color>
+	<!-- IS MISSING --><container_border_color>rgba(0, 0, 0, 0)</container_border_color>
+	<!-- IS MISSING --><content_background_color>rgba(0, 0, 0, 0)</content_background_color>
 	<content_font_color>rgb(159, 159, 159)</content_font_color>
 	<content_font_color_headings>rgb(206, 197, 175)</content_font_color_headings>
 	<content_link_color></content_link_color>
 	<content_link_color_hover></content_link_color_hover>
 	<content_border_color>rgb(102, 102, 102)</content_border_color>
 	<content_accent_color></content_accent_color>
-	<content_contrast_color></content_contrast_color>
-	<content_contrast_background_color></content_contrast_background_color>
-	<content_contrast_border_color></content_contrast_border_color>
+	<content_contrast_color>rgb(206, 197, 175)</content_contrast_color>
+	<!-- IS MISSING --><content_contrast_background_color>rgba(0, 0, 0, 0)</content_contrast_background_color>
+	<content_contrast_border_color>rgba(255, 0, 0, 0.25)</content_contrast_border_color>
 	<content_positive_color>rgb(51, 204, 51)</content_positive_color>
 	<content_negative_color>rgb(226, 59, 48)</content_negative_color>
 	<content_neutral_color>rgb(153, 153, 153)</content_neutral_color>

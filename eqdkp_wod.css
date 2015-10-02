@@ -997,20 +997,12 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 /*Image Button without value*/
-.novalue {
-	width: 24px;
-}
+.novalue { width: 24px; }
 
 /* general: positive/negative/neutral */
-.positive {
-	color: #33cc33;
-}
-.negative {
-	color: #e23b30;
-}
-.neutral {
-	color: #999;
-}
+.positive { color: @eqdkpContentPositiveColor; }
+.negative { color: @eqdkpContentNegativeColor; }
+.neutral { color: @eqdkpContentNeutralColor; }
 
 /* Hack for tinymce in colorswitch tables */
 .mceLayout tr:nth-child(odd),.mceLayout>td:nth-child(odd),
@@ -3344,13 +3336,13 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	border: 1px solid #FF7500;
 	border-top-left-radius: 25px 100%;
 	border-bottom-right-radius: 25px 100%;
-	background: none repeat scroll 0 0 rgba(255, 117, 0, 0.25);
+	background: none repeat scroll 0 0 @eqdkpContentHighlightColor;
 	vertical-align: middle;
 	white-space: nowrap;
 }
 .user-groups a:hover {
 	color: #CF3300;
-	box-shadow: 0px 0px 5px 1px rgba(255, 0, 0, 0.75);
+	box-shadow: 0px 0px 5px 1px spin(@eqdkpContentHighlightColor, -27.5);
 }
 
 .user-profile .boxHeader {

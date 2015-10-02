@@ -76,8 +76,9 @@ h1, h2, h3 {
 	font-weight: bold;
 	margin-bottom: 10px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #666;
+	border-bottom: 1px solid @eqdkpContentBorderColor;
 	margin-top: 5px;
+	color: @eqdkpContentFontColorHeadings;
 }
 h1 { font-size: 20px; }
 h2 { font-size: 18px; }
@@ -1117,7 +1118,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 }
 
 .contentSubheader {
-	color: #9F9F9F;
+	color: @eqdkpContentFontColor;
 	margin-bottom: 10px;
 	margin-top: 4px;
 }
@@ -1148,7 +1149,7 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 /* Fieldsets */
 
 fieldset.settings legend {
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid lighten(@eqdkpContentBorderColor, 40);
 	font-family: 'Trebuchet MS',Arial,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
@@ -1173,14 +1174,14 @@ fieldset.settings dt {
 	width: 55%;
 	text-align: left;
 	border: none;
-	border-right: 1px solid #CCCCCC;
+	border-right: 1px solid lighten(@eqdkpContentBorderColor, 40);
 	padding-top: 3px;
 }
 fieldset.settings dd {
 	margin: 0 0 0 55%;
 	padding: 0 0 0 5px;
 	border: none;
-	border-left: 1px solid #CCCCCC;
+	border-left: 1px solid lighten(@eqdkpContentBorderColor, 40);
 	vertical-align: middle;
 	font-size: 1.00em;
 	text-align: left;
@@ -1216,10 +1217,10 @@ fieldset.settings dl:after {
 }
 
 fieldset.settings dl:hover dt{
-	border-right: 1px solid #000;
+	border-right: 1px solid darken(@eqdkpContentBorderColor, 40);
 }
 fieldset.settings dl:hover dd{
-	border-left: 1px solid #000;
+	border-left: 1px solid darken(@eqdkpContentBorderColor, 40);
 }
 fieldset.settings dt label {
 	font-size: 1.00em;
@@ -1231,7 +1232,7 @@ fieldset.settings dd label {
 	margin: 0 10px 0 0;
 }
 fieldset.settings dt span {
-	color: #666;
+	color: darken(@eqdkpContentFontColor, 22.2);
 }
 
 img {
@@ -1530,7 +1531,7 @@ hr#system-readmore {
 }
 
 ul.breamcrumb {
-	color: #AAA;
+	color: lighten(@eqdkpContentFontColor, 4.2);
 	border: 1px solid rgba(255, 0, 0, 0.2);
 	border-top-left-radius: 15px 35px;
 	border-top-right-radius: 15px 35px;
@@ -1952,7 +1953,7 @@ ul.breamcrumb .current::before{
 	background: #000;
 	margin:0;
 	padding:5px;
-	border:1px solid #666;
+	border:1px solid @eqdkpContentBorderColor;
 	height:200px;
 	width:auto;
 	overflow: auto;
@@ -2001,10 +2002,10 @@ ul.breamcrumb .current::before{
 
 /* ACP: manage menues */
 .manage_menues_block { 
-	list-style-type: none; padding: 3px; margin:6px; border:1px dashed #666; min-width:180px;
+	list-style-type: none; padding: 3px; margin:6px; border:1px dashed @eqdkpContentBorderColor; min-width:180px;
 }
 .manage_menues_block2 {
-	list-style-type: none; padding: 3px; margin:6px; border:3px dashed #666; min-width:180px;
+	list-style-type: none; padding: 3px; margin:6px; border:3px dashed @eqdkpContentBorderColor; min-width:180px;
 }
 .manage_menues_block ul {
 	margin:0px;
@@ -2012,7 +2013,7 @@ ul.breamcrumb .current::before{
 }
 .manage_menues_block li, .manage_menues_block2 li {
 	list-style-type: none; padding: 5px;
-	margin:5px; background-color:#F5F5F5; cursor:pointer; color:#666;
+	margin:5px; background-color:#F5F5F5; cursor:pointer; color: @eqdkpContentBorderColor;
 }
 
 .manage_menues_block .toggle_button {

@@ -36,9 +36,9 @@
 	<content_highlight_color></content_highlight_color>
 	
 	<userarea_background_color></userarea_background_color>
-	<userarea_font_color></userarea_font_color>
-	<userarea_link_color></userarea_link_color>
-	<userarea_link_color_hover></userarea_link_color_hover>
+	<userarea_font_color>rgb(153, 153, 153)</userarea_font_color>
+	<userarea_link_color>rgb(170, 170, 170)</userarea_link_color>
+	<userarea_link_color_hover>rgb(221, 221, 221)</userarea_link_color_hover>
 	
 	<table_th_background_color>rgb(102, 102, 102)</table_th_background_color>
 	<table_th_font_color>rgb(0, 156, 255)</table_th_font_color>

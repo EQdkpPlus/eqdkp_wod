@@ -108,7 +108,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 	padding: 0 155px;
 	min-height: 78px;
 	background: url('@{eqdkpTemplateImagePath}bg-nav-bar-mid.png') no-repeat scroll ~"center -30px / 100% 108px" transparent;
-	color: #999;
+	color: @eqdkpUserareaFontColor;
 	text-align:left;
 }
 #personalArea:before, #personalArea:after {
@@ -131,11 +131,11 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 }
 
 #personalArea a {
-	color: #AAA;
+	color: @eqdkpUserareaLinkColor;
 	text-decoration:none;
 }
 #personalArea a:hover {
-	color: #DDD;
+	color: @eqdkpUserareaLinkColorHover;
 }
 #personalArea a:hover i {
 	text-decoration:none;
@@ -165,7 +165,7 @@ h3 { font-size: 14px; margin-bottom: 5px; border-bottom: none; }
 
 #personalAreaTime .personalAreaTime {
 	margin-top: 6px;
-	color: #777;
+	color: darken(@eqdkpUserareaFontColor, 13.2);
 	letter-spacing: -1px;
 }
 

@@ -3587,8 +3587,7 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	}
 	
 	.responsive #personalArea:before, .responsive #personalArea:after {
-		background: none;
-		box-shadow: none;
+		display: none;
 	}
 	
 	.responsive #personalArea i{

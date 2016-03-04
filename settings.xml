@@ -28,7 +28,7 @@
 	<content_border_color>rgb(102, 102, 102)</content_border_color>
 	<content_accent_color></content_accent_color>
 	<content_contrast_color>rgb(206, 197, 175)</content_contrast_color>
-	<!-- IS MISSING --><content_contrast_background_color>rgba(0, 0, 0, 0)</content_contrast_background_color>
+	<content_contrast_background_color>rgba(255, 0, 0, 0.15)</content_contrast_background_color>
 	<content_contrast_border_color>rgba(255, 0, 0, 0.25)</content_contrast_border_color>
 	<content_positive_color>rgb(51, 204, 51)</content_positive_color>
 	<content_negative_color>rgb(226, 59, 48)</content_negative_color>

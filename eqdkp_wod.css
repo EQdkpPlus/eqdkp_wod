@@ -3983,6 +3983,16 @@ button#cboxPrevious, button#cboxNext, button#cboxClose, button#cboxSlideshow {
 	#bottommenu_admin, #bottommenu_chars{
 		width: 90% !important;
 	}
+	
+	.notsignedpanel_close:before{
+		top: 10px;
+    		left: 10px;
+	}
+	.notsignedpanel {
+		overflow: scroll;
+		height: auto;
+		top: 0;
+	}
 }
 
 @media all and (max-width: 590px) {

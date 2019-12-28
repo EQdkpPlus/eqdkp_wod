@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<settings styleversion="0.2.2">	
+<settings styleversion="0.3.0">	
 	<template_path>eqdkp_wod</template_path>
 	<attendees_columns>6</attendees_columns>
 	<logo_position>left</logo_position>
@@ -49,7 +49,7 @@
 	<table_border_color>rgb(170, 170, 170)</table_border_color>
 	
 	<menu_background_color></menu_background_color>
-	<menu_font_color></menu_font_color>
+	<menu_font_color>rgb(164, 164, 164)</menu_font_color>
 	<menu_item_background_color></menu_item_background_color>
 	<menu_item_background_color_hover></menu_item_background_color_hover>
 	<menu_item_font_color_hover></menu_item_font_color_hover>

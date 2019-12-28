@@ -16,8 +16,8 @@
 		<title>{PAGE_TITLE}</title>
 		{CSS_FILES}
 		{JS_FILES}
-		<link rel="shortcut icon" href="{TEMPLATE_PATH}/images/favicon.png" type="image/png" />
-		<link rel="icon" href="{TEMPLATE_PATH}/images/favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="{FAVICON}" type="{FAVICON_TYPE}" />
+		<link rel="icon" href="{FAVICON}" type="{FAVICON_TYPE}" />
 		<link rel="apple-touch-icon" href="{TEMPLATE_PATH}/images/apple-touch-icon.png" />
 		{RSS_FEEDS}
 		<!-- LISTENER head -->
@@ -165,7 +165,22 @@
 									</ul>
 								</div>
 							</li>
-							<!-- IF S_ADMIN --><li><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> <span class="hiddenSmartphone">{L_menu_admin_panel}</span></a></li><!-- ENDIF -->
+							<!-- IF S_ADMIN -->
+							<li>
+								<div class="admin-tooltip-container">
+									<a href="{EQDKP_ROOT_PATH}admin/{SID}" class="admin-tooltip-trigger tooltip-trigger" data-tooltip="admin-tooltip"><i class="fa fa-cog fa-lg"></i> <span class="hiddenSmartphone">{L_menu_admin_panel}</span></a>
+									<ul class="dropdown-menu admin-tooltip" role="menu" id="admin-tooltip">
+										<li><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a></li>
+										<li class="tooltip-divider"></li>
+										<div class="nav-header floatLeft">{L_favorits}</div>
+										<div class="nav-header floatRight hand" title="{L_settings}"><i class="fa fa-cog fa-lg" onclick="window.location='{EQDKP_ROOT_PATH}admin/manage_menus.php{SID}&tab=1'"></i></div>
+										<!-- BEGIN admin_tooltip -->
+										<li><a href="{EQDKP_ROOT_PATH}{admin_tooltip.LINK}"><i class="fa {admin_tooltip.ICON} fa-lg"></i> {admin_tooltip.TEXT}</a></li>
+										<!-- END admin_tooltip -->
+									</ul>
+								</div>
+							</li>
+							<!-- ENDIF -->
 							
 							<!-- IF U_CHARACTERS != "" --><li><a href="{U_CHARACTERS}"><i class="fa fa-group fa-lg"></i> <span class="hiddenSmartphone">{L_menu_members}</span></a></li><!-- ENDIF -->
 							
@@ -279,34 +294,42 @@
 					<div id="mainmenu">
 						<div class="hiddenSmartphone">
 							{MAIN_MENU}
-							<span class="mainmenu-deco"></span>
 							<div class="clear noheight">&nbsp;</div>
 						</div>
 						<div class="hiddenDesktop nav-mobile">
-							<i class="fa fa-list hand" onclick="$('.nav-mobile-overlay').toggle();"></i>
-							<div class="nav-mobile-overlay">
-								<div class="nav-mobile-closebtn" onclick="$('.nav-mobile-overlay').toggle();">
-									<i class="fa fa-lg fa-times hand"></i>
-								</div>
-							{MAIN_MENU_MOBILE}
-							<!-- IF S_IN_ADMIN -->
-							<div class="admin-headline"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</div>
-							{ADMIN_MENU_MOBILE}
-							<!-- ELSE -->
-								<!-- IF S_ADMIN --><div class="admin-headline"><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a></div><!-- ENDIF -->
-							<!-- ENDIF -->
+						<i class="fa fa-list hand" onclick="$('.nav-mobile .mobile-overlay').toggle();"></i>
+						<div class="mobile-overlay">
+							<div class="overlay-header">
+								<a class="title" href="{EQDKP_CONTROLLER_PATH}{SID}">
+									<!-- IF HEADER_LOGO --><img src="{HEADER_LOGO}" alt="{MAIN_TITLE}" /><!-- ELSE -->{MAIN_TITLE}<!-- ENDIF -->
+								</a>
+								<div class="close" onclick="$('.nav-mobile .mobile-overlay').toggle();"><i class="fa fa-times"></i></div>
+							</div>
+							<div class="overlay-content">
+								<nav class="mainmenu-mobile-wrapper"><div class="heading">{L_menu_eqdkp}</div>{MAIN_MENU_MOBILE}</nav>
+								<!-- IF S_IN_ADMIN -->
+								<nav class="adminmenu-mobile-wrapper"><div class="heading">{L_menu_admin_panel}</div>{ADMIN_MENU_MOBILE}</nav>
+								<!-- ENDIF -->
+							</div>
+							<div class="overlay-footer">
+								<!-- IF S_ADMIN and not S_IN_ADMIN --><a href="{EQDKP_ROOT_PATH}admin/{SID}"><i class="fa fa-cog fa-lg"></i> {L_menu_admin_panel}</a><!-- ENDIF -->
 							</div>
 						</div>
+					</div>
 						<!-- LISTENER mainmenu -->
 					</div><!-- close mainmenu -->
 					
 					<!-- IF S_IN_ADMIN -->
-					<div id="adminmenu">
-						<div class="hiddenSmartphone">
+					<div class="hiddenSmartphone">
+						<div id="adminmenu">
 							{ADMIN_MENU}
+							<!-- LISTENER adminmenu -->
 						</div>
-						<!-- LISTENER adminmenu -->
 					</div>
+					<!-- ENDIF -->
+					
+					<!-- IF S_NORMAL_HEADER -->
+					<div class="breadcrumb-container">{BREADCRUMB}</div>
 					<!-- ENDIF -->
 				</nav>
 			</header>
@@ -478,14 +501,14 @@
 			</fieldset>
 			<input type="text" name="{HONEYPOT_VALUE}" size="30" maxlength="30" class="userpass" />
 			<button type="submit" name="login" class="mainoption"><i class="fa fa-sign-in"></i> {L_login}</button>
-			<!-- IF AUTH_LOGIN_BUTTON != "" -->
-			<br /><br />
-			<fieldset class="settings mediumsettings">
-				<legend>{L_login_use_authmethods}</legend>
-				{AUTH_LOGIN_BUTTON}
-			</fieldset>
-			<!-- ENDIF -->
 		</form>
+		<!-- IF AUTH_LOGIN_BUTTON != "" -->
+		<br /><br />
+		<fieldset class="settings mediumsettings">
+			<legend>{L_login_use_authmethods}</legend>
+			{AUTH_LOGIN_BUTTON}
+		</fieldset>
+		<!-- ENDIF -->
 	</div>
     <!-- ENDIF -->
     
@@ -494,10 +517,10 @@
 		//<![CDATA[
 		
 		<!-- IF not S_LOGGED_IN -->
-		$(document).ready(function() {
+		$(function(){
 			/* Login Dialog */
 			$( "#dialog-login" ).dialog({
-				height: <!-- IF S_BRIDGE_INFO -->450<!-- ELSE -->350<!-- ENDIF -->,
+				height: 'auto',
 				width: 530,
 				modal: true,
 				autoOpen: false,
@@ -555,7 +578,7 @@
 		var user_clock_format = "dddd, "+mmocms_user_dateformat_long+" "+ mmocms_user_timeformat;
 		var mymoment = moment(mmocms_user_timestamp_atom).utcOffset(mmocms_user_timezone);
 			
-		$(document).ready(function() {
+		$(function() {
 			$('.notification-mark-all-read').on('click', function() {
 				$('.notification-content ul').html({L_notification_none|jsencode});
 				$('.notification-bubble-red, .notification-bubble-yellow, .notification-bubble-green').hide();
@@ -574,8 +597,8 @@
 		{JS_CODE_EOP}
 		
 		//Reset Favicon, for Bookmarks
-		$(window).on('unload', function() {
-            if (typeof favicon !== 'undefined'){ favicon.reset(); }
+		$(window).on('unload', function(){
+            if(typeof favicon !== 'undefined'){ favicon.reset(); }
    		});
 		//]]>
 	</script>

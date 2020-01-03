@@ -498,7 +498,7 @@ img#mainlogo{
 .portalbox {
 	margin: 5px 5px 14px;
 	padding: 1px;
-	border: 1px solid rgba(255, 0, 0, 0.2);
+	border: 1px solid #4a2b0e;
 }
 
 .portalbox_head {
@@ -509,6 +509,7 @@ img#mainlogo{
 
 .portalbox_content {
 	padding: 5px;
+	background: url('@{eqdkpTemplateImagePath}steel.png');
 }
 
 /* Toggle Buttons for portalbox */
@@ -1333,9 +1334,9 @@ a.blue, a.blue:hover, a.button, a.button:hover {
 	border-bottom: none;
 }
 
-.table th a {
+.table th a, .ui-tabs-panel .table th a {
 	text-decoration: none;
-	color: @eqdkpTableThFontColor;
+	color: @eqdkpTableThFontColor !important;
 	font-family:'Trebuchet MS',Arial,sans-serif;
 }
 
@@ -1615,19 +1616,16 @@ div[aria-describedby="dialog-login"] .password-forgot{
 	color: #00AEFF;
 	border:1px solid #00AEFF;
 	background-color: rgba(0, 62, 92, 0.5);
-	box-shadow: 0px 0px 10px 8px rgba(0, 174, 255, 0.4);
 }
 .infobox-red {
 	color: #FF0500;
 	border:1px solid #FF0500;
 	background-color: rgba(80, 0, 0, 0.5);
-	box-shadow: 0px 0px 10px 8px rgba(255, 5, 0, 0.4);
 }
 .infobox-green {
 	color: #3F0;
 	border:1px solid #3F0;
 	background-color: rgba(10, 75, 0, 0.5);
-	box-shadow: 0px 0px 10px 8px rgba(51, 255, 0, 0.4);
 }
 
 .infobox-opacgrey {
@@ -2758,8 +2756,6 @@ div.error { display: none; }
 .news_header {
 	position:relative;
 }
-
-.contentTitle { color: #E53101; }
 
 .contentSideRight{
 	text-align: left;
@@ -4500,52 +4496,13 @@ button.thirdpartylogin.openid {
 	width: 90%;
 	text-align: center;
 	display: block;
-	border-radius: 0 0 0 .5em;
 	word-wrap: break-word;
 }
 
-.ribbon span:before {
-  content: '';
-  position: absolute;
-  height: 0;
-  width: 0;
-}
 
-.ribbon span:before {
-	top: -1em;
-	left: 0em;
-	width: .5em;
-	height: 3em;
-	border-radius: 0.5em 0 0 .5em;
-	background-image: linear-gradient(to right, darken(@ribbon,1%) 0%, @ribbon 100%);
-}
-.ribbon span:after {
-  content: '';
-  position: absolute;
-  height: 0;
-  width: 0;
-}
-
-.ribbon span:after {
-	top: -1em;
-	left: 0em;
-	width: .5em;
-	height: 1em;
-	border-radius: .5em 0 0 .5em;
-	background-image: linear-gradient(to right, lighten(@ribbon,1%) 0%, darken(@ribbon,30%) 100%);
-	box-shadow: 0 .062em 0 rgba(255,255,255,.6);
-}
 .featured .ribbon > span {
 	background: linear-gradient(-90deg, lighten(@featuredColor,20%) 0%, @featuredColor 100%);
 	color: black;
-}
-
-.featured .ribbon > span:before {
-	border-bottom-color: @featuredColor;
-	background-image: linear-gradient(to right, darken(@featuredColor,1%) 0%, @featuredColor 100%);
-}
-.featured .ribbon > span:after {
-	background-image: linear-gradient(to right, lighten(@featuredColor,1%) 0%, darken(@featuredColor,30%) 100%);
 }
 
 /* Article Boxes for Calendarentries */
@@ -4797,3 +4754,20 @@ input.ui-spinner-input, input.ui-spinner-input:focus, input.ui-spinner-input:hov
 	}
 	.chatSidebar { margin: 15px 0 0 -10px; }
 
+.ui-tabs .ui-tabs-nav li {
+	border-color: #483434;
+}
+
+.ui-tabs.ui-widget-content {
+	border: none;
+}
+
+.ui-tabs-tab.ui-tabs-active.ui-state-active {
+	border: 1px solid #686868;
+	background-color: #211202;
+	border-bottom: 0px;
+}
+
+.ui-tabs-tab.ui-state-hover a {
+	color: #efefef;
+}
